@@ -1,3 +1,34 @@
+Install react-redux and @redux/toolkit
+
+
+create slice , Note slice contains name, initialState, and reducer:{this will contain all methods and each method has two parameters state and action, action has the payload coming from dispatch}
+import {createSlice} form "@redux/toolkit";
+
+const sliceTodo=createSlice({
+  name:"todos",
+  initialState:[],
+  reducer:{
+    createToDo:(state,action)=>{},
+    updateToDo:(state,action)=>{},
+    deleteToDo:(state,action)=>{},
+    completeToDo:(state,action)=>{},
+  }
+})
+
+export const {createToDo, updateToDo,deleteToDo,completeToDo};
+export sliceToDo.reducer;
+
+create store and slice with reducer
+import {configureStore} from '@redux/toolkit'
+import todoReducer from 'path of slice where reducer exists'
+const store=configureStore({
+  reducer:todoReducer
+})
+
+finally inject <Provider> </Provider>  in my case i will inejct in main.jsx
+
+
+
 Installing react-redux and @reduxjs/toolkit
 To use Redux in a React project, you need to install the necessary packages. Follow these steps:
 
